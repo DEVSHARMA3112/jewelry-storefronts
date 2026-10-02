@@ -1,0 +1,23 @@
+{
+  "name": "jewelry-storefronts",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format": "prettier --write src scripts",
+    "preview": "vite preview",
+    "gen": "node scripts/generate.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "prettier": "^3.9.9",
+    "vite": "^5.4.11"
+  }
+}
