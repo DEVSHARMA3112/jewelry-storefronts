@@ -1,0 +1,38 @@
+[
+  {
+    "id": "aur-er-1",
+    "brand": "aurelle",
+    "title": "The Solitaire Oval Ring",
+    "slug": "solitaire-oval-ring",
+    "category": "engagement-rings",
+    "price": 1950,
+    "compareAtPrice": 2400,
+    "tags": ["Bestseller"],
+    "variants": [
+      { "id": "aur-er-1-yg", "metal": "YG", "name": "14K Yellow Gold" },
+      { "id": "aur-er-1-wg", "metal": "WG", "name": "14K White Gold" }
+    ],
+    "images": [
+      { "src": "/cushion-emerald-pave-ring-1.svg", "alt": "Oval Solitaire Ring" },
+      { "src": "/cushion-emerald-pave-ring-2.svg", "alt": "Oval Solitaire Ring View" }
+    ]
+  },
+  {
+    "id": "aur-er-2",
+    "brand": "aurelle",
+    "title": "Classic Emerald Cut Ring",
+    "slug": "classic-emerald-cut-ring",
+    "category": "engagement-rings",
+    "price": 2800,
+    "compareAtPrice": 3500,
+    "tags": ["Limited Edition"],
+    "variants": [
+      { "id": "aur-er-2-wg", "metal": "WG", "name": "14K White Gold" },
+      { "id": "aur-er-2-rg", "metal": "RG", "name": "14K Rose Gold" }
+    ],
+    "images": [
+      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-1.svg", "alt": "Emerald Cut Ring" },
+      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", alt: "Emerald Cut Ring Side View" }
+    ]
+  }
+]
