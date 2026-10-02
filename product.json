@@ -32,7 +32,133 @@
     ],
     "images": [
       { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-1.svg", "alt": "Emerald Cut Ring" },
-      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", alt: "Emerald Cut Ring Side View" }
+      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", "alt": "Emerald Cut Ring Side View" }
+    ]
+  },
+  {
+    "id": "aur-er-3",
+    "brand": "aurelle",
+    "title": "Round Brilliant Pave Ring",
+    "slug": "round-brilliant-pave-ring",
+    "category": "engagement-rings",
+    "price": 3100,
+    "compareAtPrice": null,
+    "tags": ["New Collection"],
+    "variants": [
+      { "id": "aur-er-3-yg", "metal": "YG", "name": "14K Yellow Gold" },
+      { "id": "aur-er-3-wg", "metal": "WG", "name": "14K White Gold" },
+      { "id": "aur-er-3-rg", "metal": "RG", "name": "14K Rose Gold" }
+    ],
+    "images": [
+      { "src": "/cushion-emerald-pave-ring-1.svg", "alt": "Round Brilliant Pave Ring" },
+      { "src": "/cushion-emerald-pave-ring-2.svg", "alt": "Round Brilliant Pave Ring Side" }
+    ]
+  },
+  {
+    "id": "gem-gr-1",
+    "brand": "gemma-grove",
+    "title": "Oval Blue Sapphire Ring",
+    "slug": "oval-blue-sapphire-ring",
+    "category": "gemstone-rings",
+    "price": 1850,
+    "compareAtPrice": 2200,
+    "tags": ["New Collection"],
+    "variants": [
+      { "id": "gemma-gr-1-wg", "metal": "WG", "name": "14K White Gold" },
+      { "id": "gemma-gr-1-yg", "metal": "YG", "name": "14K Yellow Gold" }
+    ],
+    "images": [
+      { "src": "/oval-blue-sapphire-solitaire-ring-1.svg", "alt": "Blue Sapphire Ring Front View" },
+      { "src": "/oval-blue-sapphire-solitaire-ring-2.svg", "alt": "Blue Sapphire Ring Profile" }
+    ]
+  },
+  {
+    "id": "gem-gr-2",
+    "brand": "gemma-grove",
+    "title": "Emerald Cushion Heirloom Band",
+    "slug": "emerald-cushion-heirloom-band",
+    "category": "gemstone-rings",
+    "price": 2400,
+    "compareAtPrice": 2950,
+    "tags": ["Bestseller"],
+    "variants": [
+      { "id": "gemma-gr-2-yg", "metal": "YG", "name": "14K Yellow Gold" }
+    ],
+    "images": [
+      { "src": "/cushion-emerald-pave-ring-1.svg", "alt": "Emerald Cushion Ring" },
+      { "src": "/cushion-emerald-pave-ring-2.svg", "alt": "Emerald Cushion Ring Side" }
+    ]
+  },
+  {
+    "id": "gem-gr-3",
+    "brand": "gemma-grove",
+    "title": "Natural Royal Ruby Halo Ring",
+    "slug": "natural-royal-ruby-halo-ring",
+    "category": "gemstone-rings",
+    "price": 2750,
+    "compareAtPrice": null,
+    "tags": ["Limited Edition"],
+    "variants": [
+      { "id": "gemma-gr-3-rg", "metal": "RG", "name": "14K Rose Gold" },
+      { "id": "gemma-gr-3-wg", "metal": "WG", "name": "14K White Gold" }
+    ],
+    "images": [
+      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-1.svg", "alt": "Ruby Halo Ring" },
+      { "src": "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", "alt": "Ruby Halo Ring Side View" }
+    ]
+  },
+  {
+    "id": "lust-ms-1",
+    "brand": "lustre",
+    "title": "Moissanite Radiant Halo Ring",
+    "slug": "moissanite-radiant-halo-ring",
+    "category": "gemstone-rings",
+    "price": 1350,
+    "compareAtPrice": 1650,
+    "tags": ["Bestseller"],
+    "variants": [
+      { "id": "lust-ms-1-rg", "metal": "RG", "name": "14K Rose Gold" },
+      { "id": "lust-ms-1-yg", "metal": "YG", "name": "14K Yellow Gold" }
+    ],
+    "images": [
+      { "src": "/oval-moissanite-halo-ring-1.svg", "alt": "Moissanite Radiant Ring Front View" },
+      { "src": "/oval-moissanite-halo-ring-2.svg", "alt": "Moissanite Radiant Ring Side View" }
+    ]
+  },
+  {
+    "id": "lust-ms-2",
+    "brand": "lustre",
+    "title": "Maximum Fire Oval Solitaire",
+    "slug": "maximum-fire-oval-solitaire",
+    "category": "gemstone-rings",
+    "price": 950,
+    "compareAtPrice": 1200,
+    "tags": ["Top Rated"],
+    "variants": [
+      { "id": "lust-ms-2-wg", "metal": "WG", "name": "14K White Gold" },
+      { "id": "lust-ms-2-yg", "metal": "YG", "name": "14K Yellow Gold" }
+    ],
+    "images": [
+      { "src": "/oval-blue-sapphire-solitaire-ring-1.svg", "alt": "Oval Moissanite Ring" },
+      { "src": "/oval-blue-sapphire-solitaire-ring-2.svg", "alt": "Oval Moissanite Ring Side" }
+    ]
+  },
+  {
+    "id": "lust-ms-3",
+    "brand": "lustre",
+    "title": "Three-Stone Classic Eternity Ring",
+    "slug": "three-stone-classic-eternity-ring",
+    "category": "gemstone-rings",
+    "price": 1500,
+    "compareAtPrice": null,
+    "tags": ["New Collection"],
+    "variants": [
+      { "id": "lust-ms-3-wg", "metal": "WG", "name": "14K White Gold" },
+      { "id": "lust-ms-3-rg", "metal": "RG", "name": "14K Rose Gold" }
+    ],
+    "images": [
+      { "src": "/cushion-emerald-pave-ring-1.svg", "alt": "Three-Stone Eternity Band" },
+      { "src": "/cushion-emerald-pave-ring-2.svg", "alt": "Three-Stone Eternity Band Side" }
     ]
   }
 ]
