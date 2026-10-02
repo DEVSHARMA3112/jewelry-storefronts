@@ -1,0 +1,159 @@
+/* Colored gradient text and animations (hero entrance, shine, scroll reveal). */
+.app h1,
+.app h2 {
+  background: linear-gradient(100deg, var(--g1), var(--g2), var(--g1));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: flow 9s linear infinite;
+}
+.hb h1,
+.hb .logo,
+.home .hb * {
+  -webkit-text-fill-color: #fff;
+}
+.logo {
+  background: linear-gradient(100deg, var(--g1), var(--g2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.home .hb .logo {
+  background: none;
+  color: #fff;
+}
+.price b,
+.pr strong,
+.price {
+  color: var(--g2);
+}
+[data-brand='aurelle'] .price,
+[data-brand='aurelle'] .pr strong {
+  color: #9a5b0a;
+}
+.cat {
+  font-weight: 600;
+}
+.cat:hover {
+  background: linear-gradient(
+    120deg,
+    var(--card),
+    color-mix(in srgb, var(--g2) 22%, var(--card))
+  );
+  box-shadow: 0 12px 30px -12px var(--g2);
+}
+.trust-in strong {
+  color: var(--g2);
+  font-size: 1.1rem;
+}
+[data-brand='aurelle'] .trust-in strong {
+  color: #9a5b0a;
+}
+.stars {
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero > img {
+  animation: drift 16s ease-in-out infinite alternate;
+}
+.hero-t > * {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.hero-t > *:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.hero-t > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.btn {
+  background-image: linear-gradient(
+    110deg,
+    var(--accent),
+    color-mix(in srgb, var(--g2) 70%, var(--accent))
+  );
+  position: relative;
+  overflow: hidden;
+}
+.btn:not(.ghost):not(:disabled):after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  left: -60%;
+  background: linear-gradient(100deg, transparent, #fff7, transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s;
+}
+.btn:not(.ghost):hover:after {
+  left: 130%;
+}
+.btn.ghost {
+  background-image: none;
+}
+.cart b {
+  animation: bump 0.45s ease;
+}
+.card .ph:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, #fff3 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+}
+.card:hover .ph:after {
+  transform: translateX(100%);
+}
+.nav a {
+  position: relative;
+}
+.nav a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--g2);
+  transition: width 0.3s;
+}
+.nav a:hover:after {
+  width: 100%;
+}
+@keyframes flow {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes drift {
+  from {
+    transform: scale(1.02) translateX(0);
+  }
+  to {
+    transform: scale(1.1) translateX(-1.5%);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+@keyframes bump {
+  40% {
+    transform: scale(1.6);
+  }
+}
+@supports (animation-timeline: view()) {
+  .sec .wrap > *,
+  .revs figure,
+  .trust-in li {
+    animation: rise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}

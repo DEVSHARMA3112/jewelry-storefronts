@@ -1,0 +1,69 @@
+/* Colors, fonts and spacing as CSS variables. Each brand overrides them with [data-brand=...]. */
+:root {
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 16px;
+  --s4: 24px;
+  --s5: 40px;
+  --s6: 64px;
+  --s7: 96px;
+  --t: 200ms ease;
+  --bg: #fff;
+  --ink: #1b1b1b;
+  --muted: #666;
+  --accent: #8a6a2f;
+  --line: #e6e2da;
+  --card: #faf8f4;
+  --on: #fff;
+  --hf: Georgia, serif;
+  --bf: system-ui, sans-serif;
+  --r: 2px;
+  --hero-ink: #fff;
+  --g1: #6d3b1f;
+  --g2: #b0783a;
+}
+[data-brand='home'] {
+  --bg: #f7f4ee;
+  --hf: 'Cormorant Garamond', serif;
+  --bf: 'Jost', sans-serif;
+}
+[data-brand='aurelle'] {
+  --g1: #7a4e0e;
+  --g2: #c0392b;
+  --bg: #fbf8f2;
+  --ink: #2a2620;
+  --muted: #6b6458;
+  --accent: #a07c34;
+  --line: #e8dfcf;
+  --card: #f3ecde;
+  --hf: 'Cormorant Garamond', serif;
+  --bf: 'Jost', sans-serif;
+  --hero-ink: #2a2620;
+}
+[data-brand='gemma-grove'] {
+  --g1: #ffb3cf;
+  --g2: #ffd98a;
+  --bg: #1f1322;
+  --ink: #f6ecf0;
+  --muted: #cdb8c4;
+  --accent: #e8b4c8;
+  --line: #4a2d49;
+  --card: #2b1a2e;
+  --on: #1f1322;
+  --hf: 'Fraunces', serif;
+  --bf: 'Figtree', sans-serif;
+}
+[data-brand='lustre'] {
+  --g1: #7fd6ff;
+  --g2: #c9a7ff;
+  --bg: #0b0b10;
+  --ink: #f4f6fb;
+  --muted: #a9aebd;
+  --accent: #7fd6ff;
+  --line: #262734;
+  --card: #14141c;
+  --on: #0b0b10;
+  --hf: 'Manrope', sans-serif;
+  --bf: 'Manrope', sans-serif;
+  --r: 0;
+}

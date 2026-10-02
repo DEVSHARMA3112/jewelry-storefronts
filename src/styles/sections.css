@@ -1,0 +1,246 @@
+/* Landing sections: categories, product grid and cards, story, trust strip, reviews, comparison table, newsletter, footer. */
+.cats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s3);
+}
+.cat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  min-height: 96px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  font: 500 1.25rem var(--hf);
+  border-radius: var(--r);
+  transition: var(--t);
+}
+.cat:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.cat i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 70%;
+  gap: var(--s3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--s3);
+}
+.rail > * {
+  scroll-snap-align: start;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s4) var(--s3);
+}
+.card .ph {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--card);
+  border-radius: var(--r);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    opacity 300ms,
+    transform 600ms;
+}
+.card .alt {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+@media (hover: hover) {
+  .card:hover .alt {
+    opacity: 1;
+  }
+  .card:hover img {
+    transform: scale(1.03);
+  }
+}
+.card h3 {
+  margin: var(--s3) 0 var(--s1);
+  font-family: var(--bf);
+  font-weight: 500;
+}
+.card a:hover h3 {
+  color: var(--accent);
+}
+.badge {
+  position: absolute;
+  top: var(--s2);
+  left: var(--s2);
+  z-index: 1;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  text-transform: capitalize;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price s {
+  color: var(--muted);
+  margin-right: 4px;
+}
+.sw {
+  display: flex;
+  gap: 6px;
+}
+.sw i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+.two {
+  display: grid;
+  gap: var(--s5);
+}
+.story {
+  background: var(--card);
+}
+.story img {
+  object-position: 75% center;
+  border-radius: var(--r);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  width: 100%;
+}
+.story .two {
+  align-items: center;
+}
+.trust-in {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s4);
+}
+.trust-in li {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--accent);
+  padding-left: var(--s3);
+}
+.trust-in span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.trust {
+  border-block: 1px solid var(--line);
+  padding-block: var(--s5);
+}
+.revs {
+  display: grid;
+  gap: var(--s4);
+}
+.revs figure {
+  margin: 0;
+  padding: var(--s4);
+  background: var(--card);
+  border-radius: var(--r);
+}
+.stars {
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+blockquote {
+  margin: var(--s2) 0;
+  font: 400 1.15rem/1.5 var(--hf);
+}
+figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.scroll {
+  overflow-x: auto;
+}
+.cmp {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+.cmp th,
+.cmp td {
+  padding: var(--s3);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.cmp td:nth-child(2),
+.cmp th:nth-child(2) {
+  color: var(--accent);
+  font-weight: 700;
+}
+.news {
+  background: var(--card);
+}
+.row {
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+.row input {
+  flex: 1 1 220px;
+  min-height: 48px;
+  padding: 0 var(--s3);
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: var(--r);
+  font: inherit;
+}
+.msg {
+  min-height: 1.6em;
+  font-size: 0.9rem;
+}
+.msg.err {
+  color: #e0566b;
+}
+.msg.ok {
+  color: var(--accent);
+}
+.ftr {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  padding-block: var(--s6);
+}
+.ftr-in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s5);
+}
+.ftr nav {
+  display: flex;
+  flex-direction: column;
+}
+.ftr h3 {
+  font-family: var(--bf);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.ftr a {
+  padding: 10px 0;
+  min-height: 44px;
+}
+.ftr a:hover {
+  color: var(--accent);
+}
+.ftr p {
+  color: var(--muted);
+}

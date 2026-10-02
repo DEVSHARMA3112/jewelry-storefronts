@@ -1,0 +1,62 @@
+/* Image category tiles and the sliding lookbook. */
+.cat {
+  position: relative;
+  aspect-ratio: 4/5;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+.cat img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+.cat:hover img {
+  transform: scale(1.08);
+}
+.cat span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s2);
+  padding: var(--s5) var(--s3) var(--s3);
+  background: linear-gradient(transparent, #000a);
+  color: #fff;
+  font: 600 1.25rem var(--hf);
+  -webkit-text-fill-color: #fff;
+}
+.look {
+  overflow: hidden;
+  padding-bottom: var(--s6);
+}
+.marq {
+  overflow: hidden;
+}
+.marq-in {
+  display: flex;
+  gap: var(--s3);
+  width: max-content;
+  animation: marq 45s linear infinite;
+}
+.marq:hover .marq-in {
+  animation-play-state: paused;
+}
+.marq-in img {
+  width: min(60vw, 280px);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--r);
+}
+@keyframes marq {
+  to {
+    transform: translateX(calc(-100% / var(--n)));
+  }
+}

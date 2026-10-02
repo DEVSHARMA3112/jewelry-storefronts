@@ -1,0 +1,90 @@
+/* Sticky header, logo, navigation, hamburger and cart button. */
+.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.hdr-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: var(--s3);
+}
+.logo {
+  white-space: nowrap;
+  font: 600 1.5rem var(--hf);
+  letter-spacing: 0.02em;
+}
+.icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;
+}
+.cart b {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  font: 600 0.7rem var(--bf);
+  background: var(--accent);
+  color: var(--on);
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+}
+.burger {
+  flex-direction: column;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+}
+.burger span {
+  width: 22px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform var(--t);
+}
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  display: none;
+  flex-direction: column;
+  border-bottom: 1px solid var(--line);
+}
+.nav.open {
+  display: flex;
+}
+.nav a {
+  padding: var(--s3);
+  min-height: 48px;
+  border-top: 1px solid var(--line);
+}
+.nav a:hover {
+  color: var(--accent);
+}
+.hdr-in .logo {
+  order: 2;
+  flex: 1;
+  text-align: center;
+}
+.cart {
+  order: 3;
+}
+.burger {
+  order: 1;
+}

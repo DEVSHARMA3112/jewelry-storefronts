@@ -1,0 +1,124 @@
+/* Tablet and desktop layouts (min-width media queries), mobile hero, reduced-motion. */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .two {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .revs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trust-in {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ftr-in {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  .rail {
+    grid-auto-columns: 38%;
+  }
+  .homes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+  .hdr-in .logo {
+    order: 0;
+    flex: 0;
+    text-align: left;
+  }
+  .nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    border: 0;
+    background: none;
+    gap: var(--s4);
+    flex: 1;
+    justify-content: center;
+  }
+  .nav a {
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .hdr-in {
+    display: flex;
+  }
+  .cart {
+    order: 3;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .rail {
+    grid-template-columns: none;
+    grid-auto-columns: calc(25% - 12px);
+  }
+  .lay {
+    display: grid;
+  }
+  .drawer {
+    position: static;
+    transform: none;
+    width: auto;
+    padding: 0;
+    display: block;
+    overflow: visible;
+  }
+  .lay {
+    grid-template-columns: 240px 1fr;
+    gap: var(--s5);
+  }
+  .drawer .dh,
+  .done,
+  .scrim,
+  .filt-btn {
+    display: none;
+  }
+  .sticky {
+    display: none;
+  }
+  .pd {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--s6);
+  }
+  .buy {
+    position: sticky;
+    top: 96px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    align-items: flex-end;
+    min-height: 640px;
+  }
+  .hero > img {
+    height: 62%;
+    object-position: 74% center;
+  }
+  .hero:after {
+    background: linear-gradient(0deg, var(--bg) 42%, transparent 72%);
+  }
+  .hero-t {
+    padding-block: var(--s4) var(--s7);
+  }
+}
