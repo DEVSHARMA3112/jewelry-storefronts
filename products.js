@@ -1,61 +1,88 @@
-// Mock product database for the multi-tenant jewelry storefronts
+// Reusable product data matrix covering the required assignment parameters
 export const MOCK_PRODUCTS = [
   {
-    id: "aurelle-1",
+    id: "aur-er-1",
     brand: "aurelle",
-    title: "The Classic Halo Ring",
-    slug: "classic-halo-ring",
+    title: "The Solitaire Oval Ring",
+    slug: "solitaire-oval-ring",
     category: "engagement-rings",
-    price: 2450,
-    compareAtPrice: 3200,
+    price: 1950,
+    compareAtPrice: 2400,
     tags: ["Bestseller"],
-    variants: [{ id: "aurelle-1-yg", metal: "YG" }, { id: "aurelle-1-wg", metal: "WG" }],
+    variants: [
+      { id: "aur-er-1-yg", metal: "YG", name: "14K Yellow Gold" },
+      { id: "aur-er-1-wg", metal: "WG", name: "14K White Gold" }
+    ],
     images: [
-      { src: "/emerald-lab-grown-diamond-halo-engagement-ring-1.svg", alt: "Classic Halo Ring Top View" },
-      { src: "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", alt: "Classic Halo Ring Side View" }
+      { src: "/cushion-emerald-pave-ring-1.svg", alt: "Oval Solitaire Ring Front View" },
+      { src: "/cushion-emerald-pave-ring-2.svg", alt: "Oval Solitaire Ring Angled View" }
     ]
   },
   {
-    id: "gemma-grove-1",
+    id: "aur-er-2",
+    brand: "aurelle",
+    title: "Classic Emerald Cut Ring",
+    slug: "classic-emerald-cut-ring",
+    category: "engagement-rings",
+    price: 2800,
+    compareAtPrice: 3500,
+    tags: ["Limited Edition"],
+    variants: [
+      { id: "aur-er-2-wg", metal: "WG", name: "14K White Gold" },
+      { id: "aur-er-2-rg", metal: "RG", name: "14K Rose Gold" }
+    ],
+    images: [
+      { src: "/emerald-lab-grown-diamond-halo-engagement-ring-1.svg", alt: "Emerald Cut Ring Front View" },
+      { src: "/emerald-lab-grown-diamond-halo-engagement-ring-2.svg", alt: "Emerald Cut Ring Side View" }
+    ]
+  },
+  {
+    id: "gemma-gr-1",
     brand: "gemma-grove",
-    title: "Oval Sapphire Cocktail Ring",
-    slug: "oval-sapphire-cocktail-ring",
+    title: "Oval Blue Sapphire Ring",
+    slug: "oval-blue-sapphire-ring",
     category: "gemstone-rings",
     price: 1850,
     compareAtPrice: null,
     tags: ["New Collection"],
-    variants: [{ id: "gemma-grove-1-wg", metal: "WG" }],
+    variants: [
+      { id: "gemma-gr-1-wg", metal: "WG", name: "14K White Gold" }
+    ],
     images: [
-      { src: "/oval-blue-High-sapphire-solitaire-ring-1.svg", alt: "Oval Sapphire Ring" },
-      { src: "/oval-blue-High-sapphire-solitaire-ring-2.svg", alt: "Oval Sapphire Ring Angled View" }
+      { src: "/oval-blue-sapphire-solitaire-ring-1.svg", alt: "Blue Sapphire Ring Front View" },
+      { src: "/oval-blue-sapphire-solitaire-ring-2.svg", alt: "Blue Sapphire Ring Profile" }
     ]
   },
   {
-    id: "lustre-1",
+    id: "lust-ms-1",
     brand: "lustre",
-    title: "Moissanite Three-Stone Band",
-    slug: "moissanite-three-stone-band",
+    title: "Moissanite Radiant Halo Ring",
+    slug: "moissanite-radiant-halo-ring",
     category: "gemstone-rings",
-    price: 1200,
-    compareAtPrice: 1500,
-    tags: ["Limited Edition"],
-    variants: [{ id: "lustre-1-rg", metal: "RG" }, { id: "lustre-1-wg", metal: "WG" }],
+    price: 1350,
+    compareAtPrice: 1650,
+    tags: ["Bestseller"],
+    variants: [
+      { id: "lust-ms-1-rg", metal: "RG", name: "14K Rose Gold" },
+      { id: "lust-ms-1-yg", metal: "YG", name: "14K Yellow Gold" }
+    ],
     images: [
-      { src: "/pear-moissanite-three-stone-ring-1.svg", alt: "Moissanite Three-Stone Ring Front View" },
-      { src: "/pear-moissanite-three-stone-ring-2.svg", alt: "Moissanite Three-Stone Ring Side View" }
+      { src: "/oval-moissanite-halo-ring-1.svg", alt: "Moissanite Radiant Ring Front View" },
+      { src: "/oval-moissanite-halo-ring-2.svg", alt: "Moissanite Radiant Ring Side View" }
     ]
   }
 ];
 
-// Reusable mock API fetching methods
 export async function getProducts(brandSlug) {
-  // Simulate network delay like a real API
-  await new Promise((resolve) => setTimeout(resolve, 300));
+  // Simple latency injection simulating standard production database operations
+  await new Promise((resolve) => setTimeout(resolve, 150));
   if (!brandSlug) return MOCK_PRODUCTS;
-  return MOCK_PRODUCTS.filter(product => product.brand === brandSlug);
+  return MOCK_PRODUCTS.filter(product => product.brand.toLowerCase() === brandSlug.toLowerCase());
 }
 
 export async function getProductBySlug(brandSlug, slug) {
-  await new Promise((resolve) => setTimeout(resolve, 200));
-  return MOCK_PRODUCTS.find(product => product.brand === brandSlug && product.slug === slug) || null;
+  await new Promise((resolve) => setTimeout(resolve, 100));
+  return MOCK_PRODUCTS.find(
+    product => product.brand.toLowerCase() === brandSlug.toLowerCase() && product.slug === slug
+  ) || null;
 }
