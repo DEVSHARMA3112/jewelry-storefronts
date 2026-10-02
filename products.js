@@ -1,4 +1,4 @@
-// Reusable product data matrix covering the required assignment parameters
+// Complete structural mock data matrix mapped to required assignment parameters
 export const MOCK_PRODUCTS = [
   {
     id: "aur-er-1",
@@ -73,8 +73,8 @@ export const MOCK_PRODUCTS = [
   }
 ];
 
+// Reusable mock API fetching methods running directly off the static code array
 export async function getProducts(brandSlug) {
-  // Simple latency injection simulating standard production database operations
   await new Promise((resolve) => setTimeout(resolve, 150));
   if (!brandSlug) return MOCK_PRODUCTS;
   return MOCK_PRODUCTS.filter(product => product.brand.toLowerCase() === brandSlug.toLowerCase());
@@ -85,4 +85,14 @@ export async function getProductBySlug(brandSlug, slug) {
   return MOCK_PRODUCTS.find(
     product => product.brand.toLowerCase() === brandSlug.toLowerCase() && product.slug === slug
   ) || null;
+}
+
+export async function getRelatedProducts(brandSlug, category, excludeId) {
+  await new Promise((resolve) => setTimeout(resolve, 100));
+  return MOCK_PRODUCTS.filter(
+    product => 
+      product.brand.toLowerCase() === brandSlug.toLowerCase() && 
+      product.category === category && 
+      product.id !== excludeId
+  ).slice(0, 4);
 }
